@@ -7,6 +7,7 @@ import 'package:project_structure/architecture/reducers/app_reducer.dart';
 import 'package:project_structure/architecture/routes/routes_action.dart';
 import 'package:project_structure/resourse/util/string_dictionary.dart';
 import 'package:project_structure/screen/home_screen.dart';
+import 'package:project_structure/screen/test_screen.dart';
 import 'package:redux/redux.dart';
 import 'package:redux_thunk/redux_thunk.dart';
 
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
           useMaterial3: true,
         ),
-        home: const HomeScreen(),
+        home: const TestScreen(),
         onGenerateRoute: RoutesAction.generateRoute,
       ),
     );

@@ -5,28 +5,35 @@ import 'package:flutter/material.dart';
  *  Project Created by AGM Khair Sabbir
  *  DATE:- 1/2/24
  */
- class TextFieldOutlineWidget extends StatefulWidget {
-   const TextFieldOutlineWidget({super.key});
 
-   @override
-   State<TextFieldOutlineWidget> createState() => _TextFieldOutlineWidgetState();
- }
+class TextFieldOutlineWidget extends StatelessWidget {
 
- class _TextFieldOutlineWidgetState extends State<TextFieldOutlineWidget> {
-   @override
-   Widget build(BuildContext context) {
-     return Container(
-       child: TextFormField(
-         initialValue: 'Input text',
-         decoration: InputDecoration(
-           labelText: 'Label text',
-           errorText: 'Error message',
-           border: OutlineInputBorder(),
-           suffixIcon: Icon(
-             Icons.error,
-           ),
-         ),
-       ),
-     );
-   }
- }
+  TextEditingController? controller;
+  String label;
+  bool readOnly;
+
+  TextFieldOutlineWidget({
+    super.key,
+    this.controller,
+    this.readOnly = false,
+    this.label = 'Entry the value',
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: controller,
+      readOnly: readOnly,
+      keyboardType: TextInputType.text,
+      decoration: InputDecoration(
+        labelText: label,
+        border: OutlineInputBorder(),
+        icon: Icon(Icons.add),
+        prefixIcon: Icon(Icons.add),
+        suffixIcon: Icon(
+          Icons.abc,o 
+        ),
+      ),
+    );
+  }
+}
