@@ -31,7 +31,7 @@ class TextFieldOutlineWidget extends StatelessWidget {
         icon: Icon(Icons.add),
         prefixIcon: Icon(Icons.add),
         suffixIcon: Icon(
-          Icons.abc,o 
+          Icons.abc,
         ),
       ),
     );
