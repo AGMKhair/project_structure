@@ -50,10 +50,10 @@ class SizeManager {
   static const double margin_30 = 30;
   static const double margin_32 = 32;
 
-  double dynamicWidth(BuildContext context, {double size = 1}){
+   static double dynamicWidth(BuildContext context, {double size = 1}){
     return MediaQuery.of(context).size.width * size;
   }
-  double dynamicHeight(BuildContext context, {double size = 1}){
+  static double dynamicHeight(BuildContext context, {double size = 1}){
     return MediaQuery.of(context).size.height * size;
   }
 }

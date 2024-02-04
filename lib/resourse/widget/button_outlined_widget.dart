@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_structure/resourse/style/size_manager.dart';
 
 /**
  *  PROJECT_NAME:-  project_structure
@@ -7,25 +8,46 @@ import 'package:flutter/material.dart';
  */
 class ButtonOutlinedWidget extends StatelessWidget {
   String? title;
-  Icons? icons;
+  IconData? icons;
   Function onClick;
-  ButtonOutlinedWidget({super.key, this.title = "Submit", this.icons,required this.onClick});
+  Color backgroundColor;
+  double radius;
+
+  ButtonOutlinedWidget({
+    super.key,
+    this.title = "Submit",
+    this.icons,
+    this.radius = 5,
+    this.backgroundColor = Colors.transparent,
+    required this.onClick,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
+      width: SizeManager.dynamicWidth(context, size: 1),
       child: (icons == null)
           ? OutlinedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(backgroundColor),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(radius)), side: BorderSide(color: Colors.black))),
+              ),
               onPressed: () {
                 onClick();
               },
               child: Text("$title"),
             )
           : OutlinedButton.icon(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(backgroundColor),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(radius)), side: BorderSide(color: Colors.black))),
+              ),
               onPressed: () {
                 onClick();
               },
-              icon: Icon(Icons.add, size: 18),
+              icon: Icon(icons),
               label: Text("$title"),
             ),
     );

@@ -16,12 +16,14 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(StringDictionary.APP_NAME),
-      ),
-      body: Container(
-        child: Text(''),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text(StringDictionary.APP_NAME),
+        ),
+        body: Container(
+          child: Text(''),
+        ),
       ),
     );
   }
