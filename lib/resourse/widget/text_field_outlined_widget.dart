@@ -11,12 +11,18 @@ class TextFieldOutlineWidget extends StatelessWidget {
   TextEditingController? controller;
   String label;
   bool readOnly;
+  IconData?  suffixIcon;
+  IconData?  prefixIcon;
+  TextInputType? inputType;
 
   TextFieldOutlineWidget({
     super.key,
     this.controller,
     this.readOnly = false,
     this.label = 'Entry the value',
+    this.suffixIcon,
+    this.prefixIcon,
+    this.inputType,
   });
 
   @override
@@ -24,15 +30,28 @@ class TextFieldOutlineWidget extends StatelessWidget {
     return TextFormField(
       controller: controller,
       readOnly: readOnly,
-      keyboardType: TextInputType.text,
+      keyboardType: inputType ?? TextInputType.text,
       decoration: InputDecoration(
         labelText: label,
-        border: OutlineInputBorder(),
-        icon: Icon(Icons.add),
-        prefixIcon: Icon(Icons.add),
-        suffixIcon: Icon(
-          Icons.abc,
+        border: OutlineInputBorder(
+            // borderSide: BorderSide(color: Colors.red)
         ),
+        // focusedBorder: OutlineInputBorder(
+        //   borderRadius: BorderRadius.circular(25.0),
+        //   borderSide: BorderSide(
+        //     color: Colors.blue,
+        //   ),
+        // ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5.0),
+          borderSide: BorderSide(
+            color: Colors.grey,
+            width: 1.0,
+          ),
+        ),
+        prefixIcon: Icon(prefixIcon ?? Icons.mode_edit_outline_outlined),
+        suffixIcon: Icon(suffixIcon),
+        contentPadding: EdgeInsets.fromLTRB(10, 10, 10, 0),
       ),
     );
   }
