@@ -33,6 +33,9 @@ class SizeManager {
   static const double text_size_14 = 14;
   static const double text_size_16 = 16;
   static const double text_size_22 = 22;
+  static const double text_size_24 = 24;
+
+  static const double text_label_size = 24;
 
   static const double margin_top_16 = 16;
   static const double margin_left_16 = 16;
@@ -50,10 +53,19 @@ class SizeManager {
   static const double margin_30 = 30;
   static const double margin_32 = 32;
 
-   static double dynamicWidth(BuildContext context, {double size = 1}){
-    return MediaQuery.of(context).size.width * size;
-  }
-  static double dynamicHeight(BuildContext context, {double size = 1}){
-    return MediaQuery.of(context).size.height * size;
-  }
+  static const double ICON_SIZE_SM = 24;
+  static const double CARD_RADIUS = 10;
+  static const double BOX_RADIUS = 10;
+  static const double radius = 10;
+  static const double DIALOG_RADIUS = 10;
+  static const double SPACE = 10;
+
+  static const double BUTTON_SECONDARY_TEXT_SIZE = 12;
+
+}
+ double dynamicWidth(BuildContext context, {double size = 1}){
+return MediaQuery.of(context).size.width * size;
+}
+ double dynamicHeight(BuildContext context, {double size = 1}){
+return MediaQuery.of(context).size.height * size;
 }

@@ -5,4 +5,5 @@ class Routes {
   static const menuScreen = "/menu";
   static const searchScreen = "/search";
   static const supportScreen = "/support";
+  static const listScreen = "/list";
 }

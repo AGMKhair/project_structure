@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:project_structure/architecture/routes/route_helper.dart';
 import 'package:project_structure/architecture/routes/routes.dart';
 
 class RoutesAction {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    final args = settings.arguments;
+    RouteHelper value = settings.arguments as RouteHelper;
     switch (settings.name) {
       case Routes.homeScreen:
         // return MaterialPageRoute(builder: (_) => const HomeScreen());

@@ -25,7 +25,7 @@ class ButtonOutlinedWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: SizeManager.dynamicWidth(context, size: 1),
+      width: dynamicWidth(context, size: 1),
       child: (icons == null)
           ? OutlinedButton(
               style: ButtonStyle(
