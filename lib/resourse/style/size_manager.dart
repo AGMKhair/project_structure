@@ -29,9 +29,13 @@ class SizeManager {
   static const double size_150 = 150;
   static const double size_200 = 200;
 
+  static const double button_hight = 48;
+
+
   static const double text_size_12 = 12;
   static const double text_size_14 = 14;
   static const double text_size_16 = 16;
+  static const double text_size_20 = 20;
   static const double text_size_22 = 22;
   static const double text_size_24 = 24;
 

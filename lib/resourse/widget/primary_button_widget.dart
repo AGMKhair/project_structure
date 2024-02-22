@@ -16,14 +16,14 @@ class PrimaryButton extends StatelessWidget {
         children: <Widget>[
           SizedBox(
             width: double.infinity,
-            height: SizeManager.size_12,
+            height: SizeManager.button_hight,
             child: ElevatedButton(
               style: ButtonStyle(
                 shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(SizeManager.BOX_RADIUS))),
               ),
               child: Text(
                 label,
-                style: TextStyle(fontSize: SizeManager.text_label_size),
+                style: TextStyle(fontSize: SizeManager.text_size_20, ),
               ),
               onPressed: isDisabled ? null : onPressed,
             ),

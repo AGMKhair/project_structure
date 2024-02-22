@@ -46,6 +46,10 @@ dependencies:
   launch_review: ^3.0.1
   flutter_typeahead: ^5.2.0
 #  loader_overlay: ^3.0.3
+  persistent_bottom_nav_bar: ^5.0.2
+  cached_network_image: ^3.3.1
+
+
 
 dev_dependencies:
   flutter_test:
