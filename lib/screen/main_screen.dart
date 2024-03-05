@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
-import 'package:project_structure/screen/home_screen.dart';
+import 'package:project_structure/screen/data_scraper/data_scraper_screen.dart';
+import 'package:project_structure/screen/data_scraper/data_scraping_search_screen.dart';
 import 'package:project_structure/screen/test_screen.dart';
 
 /**
@@ -18,20 +19,25 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-
   PersistentTabController _controller = PersistentTabController(initialIndex: 0);
-
 
   List<Widget> _buildScreens() {
     return [
-      HomeScreen(),
-      TestScreen()
+      WebViewExample(),
+      WebScraperApp(),
+      DataScraperScreen(),
+      TestScreen(),
     ];
   }
 
-
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
+      PersistentBottomNavBarItem(
+        icon: Icon(CupertinoIcons.search),
+        title: ("Data Fetch"),
+        activeColorPrimary: CupertinoColors.activeBlue,
+        inactiveColorPrimary: CupertinoColors.systemGrey,
+      ),
       PersistentBottomNavBarItem(
         icon: Icon(CupertinoIcons.home),
         title: ("Home"),
@@ -44,14 +50,22 @@ class _MainScreenState extends State<MainScreen> {
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
+      PersistentBottomNavBarItem(
+        icon: Icon(CupertinoIcons.settings),
+        title: ("Settings"),
+        activeColorPrimary: CupertinoColors.activeBlue,
+        inactiveColorPrimary: CupertinoColors.systemGrey,
+      ),
     ];
   }
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('App testing'),backgroundColor: Colors.teal,),
+      appBar: AppBar(
+        title: Text('App testing'),
+        backgroundColor: Colors.teal,
+      ),
       body: PersistentTabView(
         context, controller: _controller,
         screens: _buildScreens(),

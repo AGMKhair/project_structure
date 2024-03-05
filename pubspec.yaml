@@ -48,6 +48,13 @@ dependencies:
 #  loader_overlay: ^3.0.3
   persistent_bottom_nav_bar: ^5.0.2
   cached_network_image: ^3.3.1
+  whatsapp: ^2.0.0
+  web_scraper: ^0.1.4
+  html: ^0.15.0
+  get: ^4.6.1
+#  webview_flutter: ^4.1.0
+  flutter_html: ^2.2.1
+
 
 
 

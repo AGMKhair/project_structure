@@ -3,6 +3,7 @@ import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:project_structure/architecture/routes/routes.dart';
 import 'package:project_structure/resourse/widget/primary_button_widget.dart';
 import 'package:project_structure/screen/nev_bar/two_screen.dart';
+import 'package:web_scraper/web_scraper.dart';
 
 /**
  *  PROJECT_NAME:-  project_structure

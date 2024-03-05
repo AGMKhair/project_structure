@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_structure/architecture/routes/route_helper.dart';
 import 'package:project_structure/architecture/routes/routes.dart';
+import 'package:project_structure/screen/data_scraper/data_scraping_search_screen.dart';
 import 'package:project_structure/screen/home_screen.dart';
 import 'package:project_structure/screen/main_screen.dart';
 import 'package:project_structure/screen/nev_bar/one_screen.dart';
@@ -42,6 +43,7 @@ class RoutesAction {
 
   static  getRoutesPath(BuildContext context){
     return {
+        // Routes.searchScreen: (context) => SearchPage(),
         Routes.mainScreen: (context) => MainScreen(),
         Routes.homeScreen: (context) => HomeScreen(),
         Routes.oneScreen: (context) => OneScreen(),
