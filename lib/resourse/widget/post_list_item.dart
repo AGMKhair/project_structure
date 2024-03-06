@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_structure/model/blog_info.dart';
 import 'package:project_structure/resourse/widget/online_image_widget.dart';
-import 'package:project_structure/screen/post_details/post_details.dart';
+import 'package:project_structure/screen/blog_details/post_details.dart';
 
 /**
  *  PROJECT_NAME:-  project_structure

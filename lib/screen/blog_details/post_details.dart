@@ -1,10 +1,10 @@
-import 'package:cached_network_image/cached_network_image.dart';
+// ignore: duplicate_ignore
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_html/style.dart';
 import 'package:project_structure/architecture/base/basic_mixin.dart';
 import 'package:project_structure/model/blog_info.dart';
-import 'package:project_structure/resourse/style/style_manager.dart';
 import 'package:project_structure/resourse/widget/author_widget.dart';
 import 'package:project_structure/resourse/widget/category_pill_widget.dart';
 import 'package:project_structure/resourse/widget/online_image_widget.dart';
@@ -14,7 +14,7 @@ import 'package:project_structure/resourse/widget/online_image_widget.dart';
  *  DATE:- 5/3/24
  */
 
-class PostDetails extends StatelessWidget with BasicMixin{
+class PostDetails extends StatelessWidget with BasicMixin {
   BlogInfo post;
 
   PostDetails(this.post, {super.key});
@@ -41,7 +41,8 @@ class PostDetails extends StatelessWidget with BasicMixin{
                         tag: post.imageUrl!,
                         child: OnlineImageWidget(
                           width: size.width,
-                          height: size.height,  post.imageUrl!,
+                          height: size.height,
+                          post.imageUrl!,
                         ),
                       ),
                       Positioned(
@@ -93,13 +94,7 @@ class PostDetails extends StatelessWidget with BasicMixin{
               padding: const EdgeInsets.all(8.0),
               child: Html(
                 data: post.details!,
-                style: {
-                  'a' : Style(
-                      color: Colors.blueAccent,
-                      textDecoration: TextDecoration.underline,
-                      textDecorationColor: Colors.blueAccent
-                  )
-                },
+                style: {'a': Style(color: Colors.blueAccent, textDecoration: TextDecoration.underline, textDecorationColor: Colors.blueAccent)},
               ),
             ),
           ),
