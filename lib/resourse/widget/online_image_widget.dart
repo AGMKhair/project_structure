@@ -1,13 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:project_structure/resourse/image/image_handler.dart';
 import 'package:project_structure/resourse/util/business_dictionary.dart';
 
-class OnlineImageWidget extends StatelessWidget {
+class OnlineImage extends StatelessWidget {
   final String url;
   final double? height;
   final double? width;
 
-  const OnlineImageWidget(this.url, {super.key, this.height, this.width});
+  const OnlineImage(this.url, {super.key, this.height, this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +17,11 @@ class OnlineImageWidget extends StatelessWidget {
       height: height,
       imageUrl: url ?? '',
       fit: BoxFit.cover,
+      errorWidget: (context, url, error) =>  Image.asset(
+        ImageHandler.IMAGE_PLACE_HOLDER,
+      ),
       placeholder: (_, __) => Image.asset(
-        'images/placeholder.jpg',
-        width: width,
-        height: height,
+        ImageHandler.IMAGE_PLACE_HOLDER,
       ),
     );
   }

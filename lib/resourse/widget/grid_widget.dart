@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+import 'package:project_structure/resourse/widget/card_image_widget.dart';
+
+/**
+ *  PROJECT_NAME:-  project_structure
+ *  Project Created by AGM Khair Sabbir
+ *  DATE:- 8/3/24
+ */
+class Grid extends StatelessWidget {
+  const Grid({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: CustomScrollView(slivers: [
+          //custom widget
+          SliverToBoxAdapter(child: CardImage(onClick: (){
+
+          },)),
+
+          SliverGrid(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3, mainAxisSpacing: 0, crossAxisSpacing: 0),
+              delegate: SliverChildListDelegate(
+                  List.generate(10, (index) =>CardImage(onClick: (){
+
+                  },), )))
+
+        ]));
+
+
+  }
+}
