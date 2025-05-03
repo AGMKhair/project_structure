@@ -1,6 +1,6 @@
-# project_structure
+# project_structure for redux state management
 
-Project Structure
+Project Structure for redux state management
 
 ## Getting Started
 
